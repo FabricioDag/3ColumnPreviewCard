@@ -1,0 +1,111 @@
+:root{
+    --main-orange:hsl(31, 77%, 52%);
+    --main-blue:hsl(184, 100%, 22%);
+    --main-green:hsl(179, 100%, 13%);
+
+    --paragraphs:hsla(0, 0%, 100%, 0.75);
+    --maintext:hsl(0, 0%, 95%);
+}
+
+body{
+    display: grid;
+    min-height: 100vh;
+    place-content: center;
+    padding:3rem 1rem;
+}
+
+.container{
+    border-radius: 1rem;
+    background-color: aquamarine;
+    overflow: hidden;
+    max-width: 350px;
+}
+
+.container h1{
+    color: var(--maintext);
+    font-family: 'Big Shoulders Display',sans-serif;
+    text-transform: uppercase;
+}
+
+.container p{
+    color: var(--paragraphs);
+    font-family: 'Lexend Deca', sans-serif;
+    line-height: 1.5rem;
+}
+
+.card{
+    padding: 2rem;
+    position: relative;
+}
+
+.sedans{
+    background-color: var(--main-orange);
+}
+
+.sedans button{
+    color: var(--main-orange);
+}
+
+.suvs{
+    background-color: var(--main-blue);
+}
+
+.suvs button{
+    color: var(--main-blue);
+}
+
+.luxury{
+    background-color: var(--main-green);
+}
+
+.luxury button{
+    color: var(--main-green);
+}
+
+.learnMore{
+    padding: .7rem 1.7rem;
+    border-radius: 2rem;
+    border: 2px solid white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: .3s ease;
+}
+
+.learnMore:hover{
+    background-color: transparent;
+    color: white;
+}
+
+
+@media (min-width: 840px){
+    body{
+        background-color: hsl(0, 0%, 95%);
+        padding: 0;
+        display: grid;
+        place-content: center;
+        min-height: 100vh;
+        overflow: hidden;
+    }
+
+    .container{
+        display: flex;
+        max-width: 70vw;
+        min-height: 60vh;
+        background-color: green;
+        border-radius: .5rem;
+    }
+
+    .card{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card img{
+        width: 40%;
+    }
+
+    .learnMore{
+        position: absolute;
+        bottom: 2.5rem;
+    }
+}
